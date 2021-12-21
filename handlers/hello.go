@@ -16,7 +16,7 @@ func NewHello(l *log.Logger) *Hello {
 }
 
 func (h *Hello) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
-	log.Println("Microservices with Go")
+	h.l.Println("Microservices with Go")
 	d, err := ioutil.ReadAll(r.Body)
 
 	if err != nil {
